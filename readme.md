@@ -17,11 +17,11 @@ Run :
 
     git clone https://github.com/hyfn/homestead.git Homestead
 
-in a directory *outside* of where you store your projects. For instance your projects may be stored in
+in a directory *outside* of where you store your projects. For instance, if your projects are stored in
 
     /Users/whoeveryouare/PhpstormProjects/work.
 
-Run the above code in say:
+Then  run the above code in a directory like:
 
     /Users/whoeveryouare.
 
@@ -36,12 +36,14 @@ Create ssh keys for yourself preferably at
 
 The location isn't as important as their existence:
 
-OSX:
-1. Open Terminal
-2. run "ssh-keygen -t rsa" make sure you note down where you stored the keys
+#### H4 OSX:
+
+1. Open Terminal --hit
+2. run `ssh-keygen -t rsa` make sure you note down where you stored the keys
 3. If for example, your keys were stored in "/Users/whoEverYouAre/.ssh" then replace that location with the location in Homestead-Example.yaml
 
-Windows:
+#### H4 Windows:
+
 1. Follow these instructions: [Windows Instructions](http://kb.site5.com/shell-access-ssh/how-to-generate-ssh-keys-and-connect-to-your-account-with-putty/)
 2. If for example, your keys were stored in "/Users/whoEverYouAre/.ssh" then replace that location with the location in Homestead-Example.yaml
 
