@@ -108,7 +108,7 @@ for OSX or for Win 7
 
 At this point you should have the ability to run one virtual machine for all your projects which will be available at
 
-    `vm.first-project.local:8000`
+    vm.first-project.local:8000
 
 . The box will have the following specs:
 
