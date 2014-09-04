@@ -34,7 +34,11 @@ Then  run the above code in a directory like:
 
     /Users/whoeveryouare.
 
-It doesn't matter as long as your projects are not within the homestead repo
+It doesn't matter as long as your projects are not within the homestead repo. Once you've cloned Homestead run
+
+    git checkout -b developer
+
+This is where your homestead environment will live and thrive. Don't switch back....hey...don't!
 
 Step #2.
 --------
@@ -67,16 +71,16 @@ Step #3. Open Homestead-Example.yaml and replace the appropriate values as follo
 
     folders:
         - map: /where/ever/you/store/your/code/projects
-          to: /home/vagrant/Code
+          to: /home/vagrant/projects
 
     sites:
         - map: vm.first-project.local
-          to: /home/vagrant/Code/first-project/where/ever/index.php/is/located
-          provisionScript: /home/vagrant/Code/first-project/where/your/project/specific/provision/script/is/setup.sh
+          to: /home/vagrant/projects/first-project/where/ever/index.php/is/located
+          provisionScript: /home/vagrant/projects/first-project/where/your/project/specific/provision/script/is/setup.sh
 
         - map: vm.second-project.local
-          to: /home/vagrant/Code/second-project/where/ever/index.php/is/located
-          provisionScript: /home/vagrant/Code/second-project/where/your/project/specific/provision/script/is/setup.sh
+          to: /home/vagrant/projects/second-project/where/ever/index.php/is/located
+          provisionScript: /home/vagrant/projects/second-project/where/your/project/specific/provision/script/is/setup.sh
 
 Note:
 1. Keep the domain in the format of vm.your-project.local. "local" is needed for backwards compatibility and standardization, "vm" kinda looks cool
@@ -124,6 +128,21 @@ At this point you should have the ability to run one virtual machine for all you
 + Laravel Envoy
 + Fabric + HipChat Extension
 
-and will compatible with auto-deployment via Laravel Forge
+as well as
+
++ XDebug - so you all can stop var dumping the $#!+ out of your projects
+
+and will compatible with auto-deployment via Laravel Forge.
+
+
+Wrapping Up
+-----------
+
+Once you're all setup and everything works here are some tips to make things even more convenient
+
++ Get the hell out of master! We know you didn't switch over at the beginning
++ If you're using an IntelliJ based IDE like [PhpStorm, WebStorm, RubyMine, etc](http://www.jetbrains.com/products.html),
+you can create a server at 192.168.10.10 with vagrant as the user and your rsa key
++
 
 

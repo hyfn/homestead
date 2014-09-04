@@ -10,16 +10,16 @@ keys:
 
 folders:
     - map: /Users/whoEverYouAre/PhpstormProjects
-      to: /home/vagrant/Code
+      to: /home/vagrant/projects
 
 sites:
     - map: vm.laravel-skeleton.local
-      to: /home/vagrant/Code/work/laravel-skeleton/public
-      provisionScript: /home/vagrant/Code/work/laravel-skeleton/provision/bash/setup.sh
+      to: /home/vagrant/projects/work/laravel-skeleton/public
+      provisionScript: /home/vagrant/projects/work/laravel-skeleton/provision/bash/setup.sh
 
     #- map: vm.laravel-skeleton-42.local
-    #  to: /home/vagrant/Code/work/laravel-42-cms-skeleton/public
-    #  provisionScript: /home/vagrant/Code/work/laravel-42-cms-skeleton/provision/bash/setup.sh
+    #  to: /home/vagrant/projects/work/laravel-42-cms-skeleton/public
+    #  provisionScript: /home/vagrant/projects/work/laravel-42-cms-skeleton/provision/bash/setup.sh
 
 variables:
     - key: APPLICATION_ENV
