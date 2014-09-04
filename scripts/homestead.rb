@@ -62,5 +62,14 @@ class Homestead
         end
       end
     end
+
+    # Hyfn Projects Setup
+    settings["sites"].each do |site|
+        config.vm.provision "shell" do |s|
+            s.path = "./scripts/projects_setup.sh"
+            s.args = [site["map"], site["to"], site["provisionScript"]]
+        end
+    end
+
   end
 end
