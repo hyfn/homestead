@@ -37,13 +37,13 @@ Create ssh keys for yourself preferably at
 The location isn't as important as their existence:
 
 OSX:
-    i.   Open Terminal
-    ii.  run "ssh-keygen -t rsa" make sure you note down where you stored the keys
-    iii. If for example, your keys were stored in "/Users/whoEverYouAre/.ssh" then replace that location with the location in Homestead-Example.yaml
+1. Open Terminal
+2. run "ssh-keygen -t rsa" make sure you note down where you stored the keys
+3. If for example, your keys were stored in "/Users/whoEverYouAre/.ssh" then replace that location with the location in Homestead-Example.yaml
 
 Windows:
-    i.   Follow these instructions: http://kb.site5.com/shell-access-ssh/how-to-generate-ssh-keys-and-connect-to-your-account-with-putty/
-    ii.  If for example, your keys were stored in "/Users/whoEverYouAre/.ssh" then replace that location with the location in Homestead-Example.yaml
+1. Follow these instructions: [Windows Instructions](http://kb.site5.com/shell-access-ssh/how-to-generate-ssh-keys-and-connect-to-your-account-with-putty/)
+2. If for example, your keys were stored in "/Users/whoEverYouAre/.ssh" then replace that location with the location in Homestead-Example.yaml
 
 Note: The first usage [authorize] is for your .pub key, the second usage [keys] is for your private key and does not need the extension
 
