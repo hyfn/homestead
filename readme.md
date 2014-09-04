@@ -11,6 +11,15 @@ Official documentation [is located here](http://laravel.com/docs/homestead?versi
 Setting Up Hyfn Homestead:
 ==========================
 
+Prerequisites.
+--------------
+
+1. Install [Vagrant](http://vagrantup.com/)
+2. Install [VirtualBox](https://www.virtualbox.org/)
+3. Install Git
+
+
+
 Step #1.
 --------
 Run :
@@ -38,7 +47,7 @@ The location isn't as important as their existence:
 
 #### H4 OSX:
 
-1. Open Terminal --hit
+1. Open Terminal
 2. run `ssh-keygen -t rsa` make sure you note down where you stored the keys
 3. If for example, your keys were stored in "/Users/whoEverYouAre/.ssh" then replace that location with the location in Homestead-Example.yaml
 
@@ -66,5 +75,46 @@ Step #3. Open Homestead-Example.yaml and replace the appropriate values as follo
 
 Note:
 1. Keep the domain in the format of vm.your-project.local. "local" is needed for backwards compatibility and standardization, "vm" kinda looks cool
+
+If all goes well homestead should be setup and ALMOST ready to go
+
+1. Go to your Homestead directory
+2. Run `vagrant box add laravel/homestead` to add the currently tested box
+3. This will take a while so run
+
+    `sudo nano /private/etc/hosts`
+
+Add entries for each of your project sites you setup in Homestead-Example.yml
+
+    `127.0.0.1  vm.first-project.local`
+    `127.0.0.1  vm.second-project.local`
+
+Then
+
+    dscacheutil -flushcache
+
+for OSX and for Win 7
+
+    ipconfig /flushdns
+
+4. Rename your Homestead-Example.yaml to Homestead.yaml and overwrite the default (if you didn't just edit it straightaway)
+
+5. run `vagrant up` at your homestead directory
+
+At this point you should have the ability to run one virtual machine for all your projects. The box will have the following specs
+
+Ubuntu 14.04
+PHP 5.5
+Nginx
+MySQL
+Postgres
+Node (With Bower, Grunt, and Gulp)
+Redis
+Memcached
+Beanstalkd
+Laravel Envoy
+Fabric + HipChat Extension
+
+and will compatible with auto-deployment via Laravel Forge
 
 
