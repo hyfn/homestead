@@ -1,6 +1,6 @@
 # Hyfn Homestead Project
 
-This is Hyfn's official Laravel local development environment based off of ... Laravel's local development environment
+This is Hyfn's official Laravel local development environment based off of ... Laravel's official local development environment
 
 Laravel Official Documentation:
 ===============================
@@ -45,13 +45,13 @@ Create ssh keys for yourself preferably at
 
 The location isn't as important as their existence:
 
-#### H4 OSX:
+#### OSX:
 
 1. Open Terminal
 2. run `ssh-keygen -t rsa` make sure you note down where you stored the keys
 3. If for example, your keys were stored in "/Users/whoEverYouAre/.ssh" then replace that location with the location in Homestead-Example.yaml
 
-#### H4 Windows:
+#### Windows:
 
 1. Follow these instructions: [Windows Instructions](http://kb.site5.com/shell-access-ssh/how-to-generate-ssh-keys-and-connect-to-your-account-with-putty/)
 2. If for example, your keys were stored in "/Users/whoEverYouAre/.ssh" then replace that location with the location in Homestead-Example.yaml
@@ -59,6 +59,11 @@ The location isn't as important as their existence:
 Note: The first usage [authorize] is for your .pub key, the second usage [keys] is for your private key and does not need the extension
 
 Step #3. Open Homestead-Example.yaml and replace the appropriate values as follows:
+
+    authorize: /Users/whoEverYouAre/.ssh/id_rsa.pub
+
+    keys:
+        - /Users/whoEverYouAre/.ssh/id_rsa
 
     folders:
         - map: /where/ever/you/store/your/code/projects
@@ -86,14 +91,14 @@ If all goes well homestead should be setup and ALMOST ready to go
 
 Add entries for each of your project sites you setup in Homestead-Example.yml
 
-    `127.0.0.1  vm.first-project.local`
-    `127.0.0.1  vm.second-project.local`
+    127.0.0.1  vm.first-project.local
+    127.0.0.1  vm.second-project.local
 
 Then
 
     dscacheutil -flushcache
 
-for OSX and for Win 7
+for OSX or for Win 7
 
     ipconfig /flushdns
 
