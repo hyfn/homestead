@@ -106,19 +106,23 @@ for OSX or for Win 7
 
 5. run `vagrant up` at your homestead directory
 
-At this point you should have the ability to run one virtual machine for all your projects. The box will have the following specs
+At this point you should have the ability to run one virtual machine for all your projects which will be available at
 
-Ubuntu 14.04
-PHP 5.5
-Nginx
-MySQL
-Postgres
-Node (With Bower, Grunt, and Gulp)
-Redis
-Memcached
-Beanstalkd
-Laravel Envoy
-Fabric + HipChat Extension
+    `vm.first-project.local:8000`
+
+. The box will have the following specs:
+
++ Ubuntu 14.04
++ PHP 5.5
++ Nginx
++ MySQL
++ Postgres
++ Node (With Bower, Grunt, and Gulp)
++ Redis
++ Memcached
++ Beanstalkd
++ Laravel Envoy
++ Fabric + HipChat Extension
 
 and will compatible with auto-deployment via Laravel Forge
 
