@@ -1,0 +1,34 @@
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+
+authorize: /Users/chukkysMac/.ssh/id_rsa.pub
+
+keys:
+    - /Users/chukkysMac/.ssh/id_rsa
+
+folders:
+    - map: /Users/chukkysMac/PhpstormProjects
+      to: /home/vagrant/projects
+
+sites:
+    #- map: vm.ekinect.local
+    #  to: /home/vagrant/projects/personal/ekinect-site/public
+    #  provisionScript: /home/vagrant/projects/personal/ekinect-site/provision/bash/setup.sh
+
+    #- map: vm.laravel-skeleton.local
+    #  to: /home/vagrant/projects/work/laravel-skeleton/public
+    #  provisionScript: /home/vagrant/projects/work/laravel-skeleton/provision/bash/setup.sh
+
+    - map: vm.wsj.local
+      to: /home/vagrant/projects/work/wsj/public
+      provisionScript: /home/vagrant/projects/work/wsj/provision/bash/setup.sh
+
+    #- map: vm.laravel-skeleton-42.local
+    #  to: /home/vagrant/projects/work/laravel-42-cms-skeleton/public
+    #  provisionScript: /home/vagrant/projects/work/laravel-42-cms-skeleton/provision/bash/setup.sh
+
+variables:
+    - key: APPLICATION_ENV
+      value: homestead
